@@ -14,7 +14,7 @@
     </div>
 
     <div class="col-sm-1">
-        <a type="button" class="btn btn-primary">
+        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#heroDpsModal">
             <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
         </a>
     </div>
@@ -32,7 +32,7 @@
     </div>
 
     <div class="col-sm-1">
-        <a type="button" class="btn btn-primary">
+        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#monsterHpModal">
             <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
         </a>
     </div>
@@ -50,7 +50,7 @@
     </div>
 
     <div class="col-sm-1">
-        <a type="button" class="btn btn-primary">
+        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#moneyNeededModal">
             <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
         </a>
     </div>
@@ -74,7 +74,7 @@
     </div>
 
     <div class="col-sm-1">
-        <a type="button" class="btn btn-primary">
+        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#coinsModal">
             <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
         </a>
     </div>
@@ -87,3 +87,9 @@
 </div>
 
 {$form->render('end') }
+
+
+{include "modals/_coinsModal.latte"}
+{include "modals/_heroDpsModal.latte"}
+{include "modals/_moneyNeededModal.latte"}
+{include "modals/_monsterHpModal.latte"}
