@@ -34,6 +34,15 @@
         </div>
         <div class="col-sm-12">
             <div class="earth-bg main-box">
+
+                <div class="row" n:ifset="$calculations">
+                    <div class="alert alert-info" role="alert">
+                        Your Coins will be ready in <strong>{$calculations['timeNeeded']}</strong>. <br/>
+                        <strong>Info:</strong> You kill Monster in <strong>{$calculations['monsterKillTime']}</strong> seconds.
+                    </div>
+                </div>
+
+
                 {include "_form.latte"}
             </div>
         </div>

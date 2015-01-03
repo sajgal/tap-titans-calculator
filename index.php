@@ -8,22 +8,26 @@ use Titans\Number;
 
 require_once('vendor/autoload.php');
 
+$form = (new CalculatorForm)->getForm();
+$templateParameters = array();
 
-$heroDps = new Number(539.37, 'bb');
-$loot = new Loot(4, new Number(55.46, 'bb'));
-$monster = new Monster(new Number(1.12, 'cc'));
+if($form->isSuccess()) {
+    $formValues = $form->getValues();
 
-$moneyNeeded = new Number(48.7, 'dd');
+    $heroDps = new Number($formValues->heroDps, $formValues->heroDpsCurrency);
+    $loot = new Loot($formValues->coinsNumber, new Number($formValues->coinValue, $formValues->coinValueCurrency));
+    $monster = new Monster(new Number($formValues->monsterHealth, $formValues->monsterHealthCurrency));
 
-$calculator = new Calculator($heroDps, $loot, $monster, $moneyNeeded);
-$time = $calculator->calculateWaiting();
+    $moneyNeeded = new Number($formValues->moneyNeeded, $formValues->moneyNeededCurrency);
 
-//echo $time;
+    $calculator = new Calculator($heroDps, $loot, $monster, $moneyNeeded);
+    $calculations = $calculator->calculateWaiting();
 
-$form = new CalculatorForm();
+    $templateParameters['calculations'] = $calculations;
+}
 
-$params = array();
-$params['form'] = $form->getForm();
+
+$templateParameters['form'] = $form->getForm();
 
 $latte = new Latte\Engine;
-$latte->render(__DIR__ . '/templates/@layout.latte', $params);
+$latte->render(__DIR__ . '/templates/@layout.latte', $templateParameters);

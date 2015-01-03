@@ -36,10 +36,10 @@ class Calculator
         $oneSecondLoot = $this->loot->getBaseNumber() / $monsterKillTimeInSeconds;
         $secondsNeeded = $this->moneyNeeded->getBase() / $oneSecondLoot;
 
-        return 'Monster killed in ' . round($monsterKillTimeInSeconds, 2) . ' s <br />' .
-//               'One second Loot = ' . $oneSecondLoot . '<br />' .
-               'Time Needed: ' . $this->secondsToTime($secondsNeeded);
+        $out['monsterKillTime'] = round($monsterKillTimeInSeconds, 2);
+        $out['timeNeeded'] = $this->secondsToTime($secondsNeeded);
 
+        return $out;
     }
 
     function secondsToTime($inputSeconds) {
