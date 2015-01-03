@@ -3,6 +3,24 @@
 {$form->render('errors') }
 
 <div class="form-group">
+    {$form['moneyNeeded']->label->setClass('col-sm-2 control-label')}
+
+    <div class="col-sm-6">
+        {$form['moneyNeeded']->control}
+    </div>
+
+    <div class="col-sm-2">
+        {$form['moneyNeededCurrency']->control}
+    </div>
+
+    <div class="col-sm-1">
+        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#moneyNeededModal">
+            <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+        </a>
+    </div>
+</div>
+
+<div class="form-group">
     {$form['heroDps']->label->setClass('col-sm-2 control-label')}
 
     <div class="col-sm-6">
@@ -33,24 +51,6 @@
 
     <div class="col-sm-1">
         <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#monsterHpModal">
-            <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
-        </a>
-    </div>
-</div>
-
-<div class="form-group">
-    {$form['moneyNeeded']->label->setClass('col-sm-2 control-label')}
-
-    <div class="col-sm-6">
-        {$form['moneyNeeded']->control}
-    </div>
-
-    <div class="col-sm-2">
-        {$form['moneyNeededCurrency']->control}
-    </div>
-
-    <div class="col-sm-1">
-        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#moneyNeededModal">
             <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
         </a>
     </div>
