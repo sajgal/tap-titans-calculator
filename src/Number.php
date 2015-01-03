@@ -59,8 +59,12 @@ class Number
         return $valueWithBasicConversion * pow(1000, $exp);
     }
 
-    public function getCurrencies($count = 8)
+    public function getCurrencies($count = 30)
     {
+        if($count > 30) {
+            $count = 30;
+        }
+
         $out = array();
 
         $out = array_merge($out, $this->currencyLadder);
