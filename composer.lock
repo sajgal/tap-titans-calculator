@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "afd82e7e18b61600bcaf925abcbb7533",
+    "hash": "a8fcf5862c48ca0a1de7ad1cfe094cf4",
     "packages": [
         {
             "name": "latte/latte",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/latte.git",
-                "reference": "71c5175aacc49ddb03e4bb65ec85f13ff5ca02ca"
+                "reference": "35876cd9a31adfebe6c6264cf69463a4c29dd9cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/latte/zipball/71c5175aacc49ddb03e4bb65ec85f13ff5ca02ca",
-                "reference": "71c5175aacc49ddb03e4bb65ec85f13ff5ca02ca",
+                "url": "https://api.github.com/repos/nette/latte/zipball/35876cd9a31adfebe6c6264cf69463a4c29dd9cd",
+                "reference": "35876cd9a31adfebe6c6264cf69463a4c29dd9cd",
                 "shasum": ""
             },
             "require": {
@@ -64,7 +64,7 @@
                 "templating",
                 "twig"
             ],
-            "time": "2014-12-21 14:49:57"
+            "time": "2015-01-07 00:28:39"
         },
         {
             "name": "nette/component-model",
@@ -122,12 +122,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/forms.git",
-                "reference": "1c0241c68a8f2eb729023f4683bcf7da1debc607"
+                "reference": "f36ed15ddaaecaee6567dabb65d043126d0be189"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/forms/zipball/1c0241c68a8f2eb729023f4683bcf7da1debc607",
-                "reference": "1c0241c68a8f2eb729023f4683bcf7da1debc607",
+                "url": "https://api.github.com/repos/nette/forms/zipball/f36ed15ddaaecaee6567dabb65d043126d0be189",
+                "reference": "f36ed15ddaaecaee6567dabb65d043126d0be189",
                 "shasum": ""
             },
             "require": {
@@ -173,7 +173,7 @@
             ],
             "description": "Nette Forms: greatly facilitates web forms",
             "homepage": "http://nette.org",
-            "time": "2014-12-30 01:40:04"
+            "time": "2015-01-07 00:29:48"
         },
         {
             "name": "nette/http",
@@ -227,6 +227,58 @@
             "description": "Nette HTTP Component",
             "homepage": "http://nette.org",
             "time": "2014-12-21 21:49:54"
+        },
+        {
+            "name": "nette/neon",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/neon.git",
+                "reference": "9588109efcc3cb44631cf67af47bca92b979a20a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/neon/zipball/9588109efcc3cb44631cf67af47bca92b979a20a",
+                "reference": "9588109efcc3cb44631cf67af47bca92b979a20a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-iconv": "*",
+                "php": ">=5.3.1"
+            },
+            "require-dev": {
+                "nette/tester": "~1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "http://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "http://nette.org/contributors"
+                }
+            ],
+            "description": "Nette NEON: parser & generator for Nette Object Notation",
+            "homepage": "http://ne-on.org",
+            "time": "2015-01-04 23:08:10"
         },
         {
             "name": "nette/utils",
@@ -283,17 +335,56 @@
             "time": "2014-12-30 09:55:38"
         },
         {
+            "name": "roarbb/webhooker",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roarbb/webhooker.git",
+                "reference": "a9a70c4d7f82b82932d2a2a971028b54367475db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roarbb/webhooker/zipball/a9a70c4d7f82b82932d2a2a971028b54367475db",
+                "reference": "a9a70c4d7f82b82932d2a2a971028b54367475db",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Webhook\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matej Sajgal",
+                    "email": "matej@sajgal.com",
+                    "homepage": "http://www.sajgal.com"
+                }
+            ],
+            "description": "Github Webhook Helper",
+            "homepage": "https://github.com/roarbb/webhooker",
+            "keywords": [
+                "github",
+                "webhook"
+            ],
+            "time": "2015-01-09 09:01:30"
+        },
+        {
             "name": "tracy/tracy",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tracy.git",
-                "reference": "2180ce0e23a39bcae0c77e28b8c40d9d43f4a14e"
+                "reference": "669812935f31791a74c115492caddf793b110425"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/2180ce0e23a39bcae0c77e28b8c40d9d43f4a14e",
-                "reference": "2180ce0e23a39bcae0c77e28b8c40d9d43f4a14e",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/669812935f31791a74c115492caddf793b110425",
+                "reference": "669812935f31791a74c115492caddf793b110425",
                 "shasum": ""
             },
             "require": {
@@ -339,7 +430,7 @@
                 "debugger",
                 "nette"
             ],
-            "time": "2014-12-15 02:31:59"
+            "time": "2015-01-09 00:06:20"
         }
     ],
     "packages-dev": [],
@@ -348,9 +439,12 @@
     "stability-flags": {
         "nette/forms": 20,
         "latte/latte": 20,
-        "tracy/tracy": 20
+        "tracy/tracy": 20,
+        "nette/neon": 20,
+        "roarbb/webhooker": 20
     },
     "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": [],
     "platform-dev": []
 }

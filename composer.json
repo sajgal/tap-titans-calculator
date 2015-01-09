@@ -2,7 +2,9 @@
   "require": {
     "nette/forms": "2.3.*@dev",
     "latte/latte": "2.3.*@dev",
-    "tracy/tracy": "2.3.*@dev"
+    "tracy/tracy": "2.3.*@dev",
+    "nette/neon": "2.3.*@dev",
+    "roarbb/webhooker": "dev-master"
   },
 
   "autoload": {
